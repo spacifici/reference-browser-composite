@@ -1,0 +1,6 @@
+[submodule "extern/android-components"]
+	path = extern/android-components
+	url = git@github.com:spacifici/android-components.git
+[submodule "extern/reference-browser"]
+	path = extern/reference-browser
+	url = git@github.com:spacifici/reference-browser.git

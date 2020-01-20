@@ -1,0 +1,3 @@
+task assemble {
+    dependsOn gradle.includedBuild('reference-browser').task(':app:assembleDebug')
+}
