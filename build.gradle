@@ -1,3 +1,18 @@
 task assemble {
     dependsOn gradle.includedBuild('reference-browser').task(':app:assembleDebug')
 }
+
+task test {
+    dependsOn gradle.includedBuild('reference-browser').task(':app:testDebugUnitTest')
+}
+
+task lint {
+    final ref = gradle.includedBuild('reference-browser')
+    dependsOn {
+        [
+            ref.task(':ktlint'),
+            ref.task(':detekt'),
+            ref.task(':app:lint'),
+        ]
+    }
+}
